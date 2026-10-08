@@ -72,6 +72,8 @@ automatically.
 
 ## Using the simulation
 
+![The full interface — flow field, control desk and force balance](docs/interface.png)
+
 | Control | What it does |
 | --- | --- |
 | **Velocity / Vorticity / Pressure** | Switches the colour field drawn in the tunnel. |
