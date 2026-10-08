@@ -12,9 +12,10 @@ canvas.
 
 ![The 14-bis wind tunnel — velocity field and smoke streaklines over the biplane slice](docs/preview.png)
 
----
+> The sections below are collapsed — click any heading to expand it.
 
-## Quick start
+<details>
+<summary><strong>Quick start</strong></summary>
 
 No install, no build, no server required.
 
@@ -49,9 +50,10 @@ python3 -m http.server 8000
 Any static file server works (`npx serve`, `php -S localhost:8000`, the VS Code
 "Live Server" extension, etc.).
 
----
+</details>
 
-## Project structure
+<details>
+<summary><strong>Project structure</strong></summary>
 
 ```
 14bis-wind-tunnel/
@@ -68,9 +70,10 @@ split into separate HTML, CSS and JavaScript so each concern is easy to read and
 edit on its own. Light and dark themes follow the system preference
 automatically.
 
----
+</details>
 
-## Using the simulation
+<details>
+<summary><strong>Using the simulation</strong></summary>
 
 ![The full interface — flow field, control desk and force balance](docs/interface.png)
 
@@ -95,9 +98,10 @@ propeller jet speed, and the real-flight Reynolds number. The headline figure is
 **lift ÷ weight** (weight = 300 kgf); a value near 1 means level flight. The
 history strip plots that ratio over the last few simulated seconds.
 
----
+</details>
 
-## How it works — the lattice Boltzmann solver
+<details>
+<summary><strong>How it works — the lattice Boltzmann solver</strong></summary>
 
 Instead of discretising the Navier–Stokes equations directly, the **lattice
 Boltzmann method (LBM)** tracks *particle distribution functions* `f_i` on a
@@ -233,9 +237,10 @@ overlays for the aircraft, smoke and instruments. The step count per frame
 simply takes fewer solver steps per rendered frame. If you have
 `prefers-reduced-motion` set, it pre-settles the flow and starts paused.
 
----
+</details>
 
-## Modelling assumptions & limitations
+<details>
+<summary><strong>Modelling assumptions &amp; limitations</strong></summary>
 
 This is a teaching toy, not an engineering tool. Read the numbers as orders of
 magnitude, not verdicts.
@@ -280,9 +285,10 @@ numbers shift accordingly.
 | Settling period | 2300 steps | Verdict ("level flight", etc.) is withheld until then. |
 | Stability guards | \|u\| ≤ 0.35 lu, 0.6 < ρ < 1.6 | Clamp speed and reject non-physical cells. |
 
----
+</details>
 
-## How this compares to professional CFD
+<details>
+<summary><strong>How this compares to professional CFD</strong></summary>
 
 This solver trades almost everything for **interactivity** — it has to finish a
 time step in a few milliseconds on one browser thread. Production tools such as
@@ -319,9 +325,10 @@ The point of *this* project is the opposite of that: to let you **feel** the
 flow respond to the controls instantly, and to show the lattice Boltzmann method
 working in plain sight.
 
----
+</details>
 
-## 14-bis data sheet
+<details>
+<summary><strong>14-bis data sheet</strong></summary>
 
 | | |
 | --- | --- |
@@ -339,6 +346,8 @@ working in plain sight.
 On **23 October 1906** the 14-bis made the first officially-witnessed powered
 flight in Europe. On **12 November 1906** it covered 220 m, setting the first
 world record recognised by the Aéro-Club de France.
+
+</details>
 
 ---
 
