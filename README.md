@@ -122,11 +122,11 @@ wall bounce-back.
 
 ```
         D2Q9 velocity set              weights w_i
-                                        ┌──────────────┐
+                                        ┌───────────────┐
          6     2     5                  │  0      4/9   │   rest
           ╲    │    ╱                   │  1–4    1/9   │   axial  (N,E,S,W)
            ╲   │   ╱                    │  5–8    1/36  │   diagonal
-       3 ───── 0 ───── 1               └──────────────┘
+       3 ───── 0 ───── 1                └───────────────┘
            ╱   │   ╲                    Σ w_i = 1
           ╱    │    ╲                    opposite(i) flips e_i → −e_i,
          7     4     8                   used for no-slip bounce-back.
@@ -145,7 +145,7 @@ momentum they transfer is tallied to measure lift and drag.
 
 ```
                  ┌───────────────────────────────────────────────┐
-                 │            ONE LATTICE-BOLTZMANN STEP           │
+                 │            ONE LATTICE-BOLTZMANN STEP         │
                  └───────────────────────────────────────────────┘
 
    distributions f_i(x, t)
@@ -162,10 +162,10 @@ momentum they transfer is tallied to measure lift and drag.
  │               │   guards: clamp |u|, reject non-physical ρ
  └──────┬────────┘
         ▼
- ┌───────────────┐   f_i^eq = w_i · ρ · [ 1 + 3(e_i·u)
+ ┌────────────────┐   f_i^eq = w_i · ρ · [ 1 + 3(e_i·u)
  │  3. EQUILIBRIUM│                        + 9/2 (e_i·u)²
- │               │                        − 3/2 |u|² ]
- └──────┬────────┘
+ │                │                        − 3/2 |u|² ]
+ └──────┬─────────┘
         ▼
  ┌───────────────┐   local relaxation time from the strain rate |Q|:
  │  4. COLLIDE   │       τ = ½( τ0 + √( τ0² + C·|Q|/ρ ) )   ← Smagorinsky LES
