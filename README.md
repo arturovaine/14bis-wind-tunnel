@@ -339,3 +339,14 @@ working in plain sight.
 On **23 October 1906** the 14-bis made the first officially-witnessed powered
 flight in Europe. On **12 November 1906** it covered 220 m, setting the first
 world record recognised by the Aéro-Club de France.
+
+---
+
+## License
+
+© 2026 Arturo Vaine. Licensed under the
+[Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You are free to **share** and **adapt** this work for **non-commercial**
+purposes, with attribution. **Commercial use is not permitted** without prior
+written permission. See [`LICENSE`](LICENSE) for the full terms.
